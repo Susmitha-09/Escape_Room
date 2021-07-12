@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Escape</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="room">
+      <img id="locker" src="lock.jpg" onclick="lock()">
+      <img id="diya" src='diya.png' onclick="window.location.href='clue1.html';">
+      <img id="lamp" src='lamp.png' onclick="window.location.href='clue2.html';">
+      <img id="paper" src='paper.png' onclick="window.location.href='clue3.html';">
+      <img id="board" src='board.png' onclick="window.location.href='clue4.html';">
+      <img id="chain" src='chain.png' onclick="window.location.href='clue5.html';">
+      <img id="key" src='key.png' onclick="window.location.href='clue6.html';">
+      <img id="gun" src='gun.png' onclick="window.location.href='clue7.html';">
+      <button id="escape" onclick="window.location.href='end.html';" > <b>Get out of the room!</b></button>
+    </div>
+    <script>
+      function lock(){
+        // console.log("You clicked the door");
+        var pwd = prompt("Please enter your Password", "Password");
+        if(pwd=="INDIA"){
+          alert("Hello you entered '" + pwd + "' as your password which is the right one!! You can now escape from room");
+          document.getElementById("escape").style.visibility="visible";
+        }
+        else{
+          alert("Hello you entered '" + pwd + "' as your password which is wrong! Try again");
+        }
+      }
+    </script>
+  </body>
+</html>
